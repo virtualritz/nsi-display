@@ -1,0 +1,20 @@
+[package]
+name = "ndspy"
+version = "0.1.0"
+authors = ["Moritz Moeller <virtualritz@gmail.com>"]
+edition = "2018"
+
+[features]
+default = []
+juypiter = []
+
+[dependencies]
+base64 = "0.13.0"
+c_vec = "2.0.0"
+exr = "0.9.0"
+image = "0.23.12"
+lazy_static = "1.4.0"
+ndspy-sys = { path = "../ndspy-sys", features = [ "link_lib3delight" ] }
+num_enum = "0.5.1"
+nsi = { path = "../nsi", features = [ "link_lib3delight", "toolbelt" ] }
+polyhedron-ops = { path = "../polyhedron-ops", features = [ "nsi" ] }
